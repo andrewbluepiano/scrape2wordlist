@@ -5,14 +5,14 @@ A program for taking pre-existing wordlists (maybe one scraped from a website), 
 -----------
 Basic Usage
 -----------
-python scrape2wordlist.py <inputFile.txt> [options]
-	Just displays the wordlist in stdout by default.
+	python scrape2wordlist.py <inputFile.txt> [options] 
+		Just displays the wordlist in stdout by default.
 
--o <outputFileName.txt>
-	Send output to filename specified
+	-o <outputFileName.txt> 
+		Send output to filename specified
 
--v
-	Displays output in stdout even if other options are selected.
+	-v
+		Displays output in stdout even if other options are selected.
 
 -----------
 Text Formatting
@@ -34,35 +34,35 @@ Mixing
 -----------
 	The program can combine elements based on your specifications
 
-General form: -<mix code> [spec1, spec2, spec3, etc]
+	General form: -<mix code> [spec1, spec2, spec3, etc]
 
--- Mix Codes
+	-- Mix Codes
 
-	-mN [specifications]
-		Mix numbers.
-		- This will mix strings that satisfy the function int(line) based on the supplied specifications
+		-mN [specifications]
+			Mix numbers.
+			- This will mix strings that satisfy the function int(line) based on the supplied specifications
 
-	-mS [specifications]
-		Mix strings.
-		- This will mix in text strings based on the supplied specifications
+		-mS [specifications]
+			Mix strings.
+			- This will mix in text strings based on the supplied specifications
 
--- Specification Format:
-	For each mixing type, you need to specify additional arguments to control the combination format.
-	Place arguement values in brackets following the mix code, using commas to seperate each specification,
-	and brackets to surround them.
-	Ex: -mS [mi=3,ma=7,f,b]  - NO SPACES IN BETWEEN
+	-- Specification Format:
+		For each mixing type, you need to specify additional arguments to control the combination format.
+		Place arguement values in brackets following the mix code, using commas to seperate each specification,
+		and brackets to surround them.
+		Ex: -mS [mi=3,ma=7,f,b]  - NO SPACES IN BETWEEN
 
-	mi=#
-		Minimum Length - Only use strings at least # characters long
+		mi=#
+			Minimum Length - Only use strings at least # characters long
 
-	ma=#
-		Maximum Length - Only use strings at most # characters long
+		ma=#
+			Maximum Length - Only use strings at most # characters long
 
-	f
-		Front Mixing - Combine values at the beginning (mixitem) + (line)
-
-	b
-		Back Mixing - Append the values to the end (line) + (mixitem)
+		f
+			Front Mixing - Combine values at the beginning (mixitem) + (line)
+	
+		b
+			Back Mixing - Append the values to the end (line) + (mixitem)
 
 -----------
 Examples
